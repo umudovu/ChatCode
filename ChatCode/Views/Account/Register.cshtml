@@ -1,0 +1,103 @@
+﻿@model RegisterVM
+
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <title>Message Hub Register</title>
+    <!-- Simple bar CSS -->
+    <!-- Fonts CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="~/acc/css/feather.css">
+    <link rel="stylesheet" href="~/acc/css/daterangepicker.css">
+    <link rel="stylesheet" href="~/acc/css/app-light.css" id="lightTheme">
+    <link rel="stylesheet" href="~/acc/css/app-dark.css" id="darkTheme" disabled>
+  </head>
+  <body class="light ">
+    <div class="wrapper vh-100">
+      <div class="row align-items-center h-100">
+        <form class="col-lg-6 col-md-8 col-10 mx-auto" method="post" enctype="multipart/form-data">
+          <div class="mx-auto text-center my-4">
+            <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
+              <svg version="1.1" id="logo" class="navbar-brand-img brand-md" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120" xml:space="preserve">
+                <g>
+                  <polygon class="st0" points="78,105 15,105 24,87 87,87 	" />
+                  <polygon class="st0" points="96,69 33,69 42,51 105,51 	" />
+                  <polygon class="st0" points="78,33 15,33 24,15 87,15 	" />
+                </g>
+              </svg>
+            </a>
+            <h2 class="my-3">Register</h2>
+          </div>
+          <div class="form-group">
+            
+          </div>
+           <div class="form-row">
+            <div class="form-group col-md-6">
+              <label asp-for="Email">Email</label>
+              <input asp-for="Email" class="form-control" >
+            </div>
+            <div class="form-group col-md-6">
+              <label asp-for="UserName">User name</label>
+              <input asp-for="UserName" class="form-control">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label asp-for="FirstName">Firstname</label>
+              <input asp-for="FirstName" class="form-control">
+            </div>
+            <div class="form-group col-md-6">
+              <label asp-for="LastName">Lastname</label>
+              <input asp-for="LastName" class="form-control">
+            </div>
+
+             <div class="form-group col-md-6">
+              <label asp-for="Photo">Profile photo</label>
+              <input asp-for="Photo" class="form-control">
+            </div>
+            
+          </div>
+
+          <hr class="my-4">
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label asp-for="Password">New Password</label>
+                <input asp-for="Password" class="form-control" >
+              </div>
+              <div class="form-group">
+                <label asp-for="RepeatPassword">Confirm Password</label>
+                <input asp-for="RepeatPassword" class="form-control" >
+              </div>
+            </div>
+            <div class="col-md-6">
+              <p class="mb-2">Password requirements</p>
+              <p class="small text-muted mb-2"> To create a new password, you have to meet all of the following requirements: </p>
+              <ul class="small text-muted pl-4 mb-0">
+                <li> Minimum 8 character </li>
+                <li>At least one special character</li>
+                <li>At least one number</li>
+                <li>Can’t be the same as a previous password </li>
+              </ul>
+            </div>
+           
+          </div>
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+           <a class="btn btn-lg btn-primary btn-block" asp-action="login" >Have an a account? Go to login</a>
+          <p class="mt-5 mb-3 text-muted text-center">© 2020</p>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>
+
